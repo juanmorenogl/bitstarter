@@ -9,7 +9,7 @@ buff = new Buffer(texto);
 app.get('/', function(request, response) {
 //  response.send('Hello World!');
 //response.send(fs.readFileSync(outfile));
-	response.send(buff.toString('utf8', 0, buf.length));
+	response.send(buff.toString('utf8', 0, buff.length));
 });
 
 var port = process.env.PORT || 5000;
