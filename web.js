@@ -8,12 +8,10 @@ app.get('/', function(request, response) {
 //  response.send('Hello World!');
 //response.send(fs.readFileSync(outfile));
 
-fs.readFileSync('index.html', function (err, data) {
-  if (err) throw err;
-//  console.log(data);
-response.send(data);
-});
 
+var texto = fs.readFileSync('index.html'); 
+buff = new Buffer(texto);
+response.send(buff.toString());
 
 //var xx = buf.toString('utf8', 0, buf.length);
 //response.send(xx));
