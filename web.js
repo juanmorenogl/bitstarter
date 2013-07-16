@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
 //  response.send('Hello World!');
 //response.send(fs.readFileSync(outfile));
 
-fs.readFileSync('/etc/passwd', function (err, data) {
+fs.readFileSync('index.html', function (err, data) {
   if (err) throw err;
 //  console.log(data);
 response.send(data);
